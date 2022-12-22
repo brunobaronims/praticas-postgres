@@ -1,5 +1,7 @@
 CREATE DATABASE viagens;
 
+\c viagens;
+
 CREATE TABLE companies (
     id serial primary key,
     name text unique not null,

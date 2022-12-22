@@ -1,5 +1,7 @@
 CREATE DATABASE curso;
 
+\c curso;
+
 CREATE TABLE classes (
     id serial primary key,
     code text unique not null
@@ -37,7 +39,7 @@ CREATE TABLE modules (
 CREATE TABLE projects (
     id serial primary key,
     "moduleId" int references modules(id),
-    name text not null,
+    name text not null
 );
 
 CREATE TYPE "projectScore" AS ENUM ('Abaixo das expectativas', 'Dentro das expectativas', 'Acima das expectativas');
