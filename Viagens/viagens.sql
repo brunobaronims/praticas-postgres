@@ -21,3 +21,10 @@ CREATE TABLE flights (
     "departureTime" time not null,
     "arrivalTime" time not null
 );
+
+CREATE TABLE tickets (
+    id serial primary key,
+    "flightId" int references flights(id),
+    price numeric not null,
+    seat text not null
+);
